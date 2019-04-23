@@ -19,7 +19,7 @@ class Auth {
         return self::$start;
     }
 
-    private function loginUser() {
+    private function loginUser() {-
 
         $this->errors = array();
         $email = $_POST['email'];
