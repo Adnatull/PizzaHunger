@@ -1,53 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Pizza - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
-
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicous</small></a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
-	          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-		  </div>
-	  </nav>
-    <!-- END nav -->
+<?php require_once "header.php"; ?>
+<?php require_once "navbar.php"; ?>
 
     <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
 
@@ -57,69 +9,118 @@
           <div class="row slider-text justify-content-center align-items-center">
 
             <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<h1 class="mb-3 mt-5 bread">Contact Us</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact</span></p>
+            	<h1 class="mb-3 mt-5 bread">Services</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span> <span>Services</span></p>
             </div>
 
           </div>
         </div>
       </div>
     </section>
+    
 
-    <section class="ftco-section contact-section">
-      <div class="container mt-5">
-        <div class="row block-9">
-					<div class="col-md-4 contact-info ftco-animate">
-						<div class="row">
-							<div class="col-md-12 mb-4">
-	              <h2 class="h4">Contact Information</h2>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Website:</span> <a href="#">yoursite.com</a></p>
-	            </div>
-						</div>
-					</div>
-					<div class="col-md-1"></div>
-          <div class="col-md-6 ftco-animate">
-            <form action="#" class="contact-form">
-            	<div class="row">
-            		<div class="col-md-6">
-	                <div class="form-group">
-	                  <input type="text" class="form-control" placeholder="Your Name">
-	                </div>
-                </div>
-                <div class="col-md-6">
-	                <div class="form-group">
-	                  <input type="text" class="form-control" placeholder="Your Email">
-	                </div>
-	                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
+    <section class="ftco-section ftco-services">
+    	<div class="overlay"></div>
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Our Services</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
           </div>
         </div>
-      </div>
+    		<div class="row">
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class="flaticon-diet"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Healthy Foods</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class="flaticon-bicycle"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Fastest Delivery</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5"><span class="flaticon-pizza-1"></span></div>
+              <div class="media-body">
+                <h3 class="heading">Original Recipes</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>    
+          </div>
+        </div>
+    	</div>
     </section>
 
-    <div id="map"></div>
-    
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Hot Meals</h2>
+            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+            <p class="mt-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-3 text-center ftco-animate">
+      			<div class="menu-wrap">
+      				<a href="#" class="menu-img img mb-4" style="background-image: url(images/pizza-1.jpg);"></a>
+      				<div class="text">
+      					<h3><a href="#">Itallian Pizza</a></h3>
+      					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+      					<p class="price"><span>$2.90</span></p>
+      					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+      				</div>
+      			</div>
+      		</div>
+      		<div class="col-md-3 text-center ftco-animate">
+      			<div class="menu-wrap">
+      				<a href="#" class="menu-img img mb-4" style="background-image: url(images/pizza-2.jpg);"></a>
+      				<div class="text">
+      					<h3><a href="#">Itallian Pizza</a></h3>
+      					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+      					<p class="price"><span>$2.90</span></p>
+      					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+      				</div>
+      			</div>
+      		</div>
+      		<div class="col-md-3 text-center ftco-animate">
+      			<div class="menu-wrap">
+      				<a href="#" class="menu-img img mb-4" style="background-image: url(images/pizza-3.jpg);"></a>
+      				<div class="text">
+      					<h3><a href="#">Itallian Pizza</a></h3>
+      					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+      					<p class="price"><span>$2.90</span></p>
+      					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+      				</div>
+      			</div>
+      		</div>
+      		<div class="col-md-3 text-center ftco-animate">
+      			<div class="menu-wrap">
+      				<a href="#" class="menu-img img mb-4" style="background-image: url(images/pizza-4.jpg);"></a>
+      				<div class="text">
+      					<h3><a href="#">Itallian Pizza</a></h3>
+      					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+      					<p class="price"><span>$2.90</span></p>
+      					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+      				</div>
+      			</div>
+      		</div>
+    		</div>
+    	</div>
+    </section>
 
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>
