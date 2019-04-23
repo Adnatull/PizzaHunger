@@ -1,7 +1,3 @@
-<?php
-require_once "classes/Session.php";
-$data = Session::getStart();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
