@@ -72,20 +72,18 @@
                 <ul class="treeview-menu">
                     <li><a href="Pizza.php"><i class="fa fa-circle-o"></i>Add Pizza </a></li>
                     <li><a href="pizza_view.php"><i class="fa fa-circle-o"></i> Pizza Collection </a></li>
-                    <li><a href="service_details.php"><i class="fa fa-circle-o"></i> Service Details </a></li>
-                    <li><a href="service_details_view.php"><i class="fa fa-circle-o"></i> Service Details View </a></li>
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-laptop"></i>
-                    <span> Order </span>
+                    <span> Slideshow </span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pending-order.php"><i class="fa fa-circle-o"></i> Pending Order </a></li>
+                    <li><a href="add-slideshow.php"><i class="fa fa-circle-o"></i> Add Slide </a></li>
                     <li><a href="order-history.php"><i class="fa fa-circle-o"></i> Order History </a></li>
                     <li><a href="orderdetails.php"><i class="fa fa-circle-o"></i> Order Details </a></li>
                     <li><a href="order_detailsList.php"><i class="fa fa-circle-o"></i> Order Details View </a></li>
