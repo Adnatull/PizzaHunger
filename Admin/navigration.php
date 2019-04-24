@@ -64,14 +64,14 @@
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-pie-chart"></i>
-                    <span>Service Type </span>
+                    <span> Pizza Collection </span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="service.php"><i class="fa fa-circle-o"></i> Service </a></li>
-                    <li><a href="service_view.php"><i class="fa fa-circle-o"></i> Service View </a></li>
+                    <li><a href="Pizza.php"><i class="fa fa-circle-o"></i>Add Pizza </a></li>
+                    <li><a href="service_view.php"><i class="fa fa-circle-o"></i> Pizza Collection </a></li>
                     <li><a href="service_details.php"><i class="fa fa-circle-o"></i> Service Details </a></li>
                     <li><a href="service_details_view.php"><i class="fa fa-circle-o"></i> Service Details View </a></li>
                 </ul>

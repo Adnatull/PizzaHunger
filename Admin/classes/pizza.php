@@ -1,16 +1,16 @@
 <?php
-class Services {
+class Pizza {
     private static $instance = null;
     private $conn = null;
 
     public $errors = array();
     function __construct() {
-        if(isset($_POST['insertService'])) {
-            $this->insertService();
+        if(isset($_POST['insertPizza'])) {
+            $this->insertPizza();
         }
-        if(isset($_GET['deleteService'])) {
+        if(isset($_GET['deletePizza'])) {
            // echo '<script type="text/javascript">alert("'.$_GET['deleteService'].'")</script>';
-           $this->deleteService();
+           $this->deletePizza();
         }
     }
 
@@ -21,13 +21,13 @@ class Services {
         return self::$instance;
     }
 
-    private function deleteService() {
-        $id = $_GET['deleteService'];
+    private function deletePizza() {
+        $id = $_GET['deletePizza'];
         $this->errors = array();
         if(empty($id)) {
             array_push($this->errors, "No service is selected");
         }
-        $sql = "SELECT * FROM `services` WHERE `service_id`=$id";
+        $sql = "SELECT * FROM `pizza` WHERE `id`=$id";
         if(!isset($this->conn)) {
             $this->conn = Connection::getInstance()->getConn();
         }
@@ -74,12 +74,19 @@ class Services {
 
     }
 
-    private function insertService() {
+    private function insertPizza() {
         $this->errors = array();
-        $service_name       = $_POST['service_name'];
-        if(empty($service_name)) {
-            array_push($this->errors, "Service Name field is empty");
+        $pizza_name       = $_POST['pizza_name'];
+        if(empty($pizza_name)) {
+            array_push($this->errors, "Pizza Name field is empty");
         }
+
+        $pizza_description       = $_POST['pizza_description'];
+        if(empty($pizza_description)) {
+            array_push($this->errors, "Pizza description field is empty");
+        }
+
+
         $price              = $_POST['price'];
         if(empty($price)) {
             array_push($this->errors, "Price field is empty");
@@ -99,7 +106,7 @@ class Services {
             }
             $t = time();
             $image = $t.md5($image).$imgextension;
-            $target = "../images/".basename($image);
+            $target = "../images/pizza/".basename($image);
             if ( !move_uploaded_file($_FILES['image']['tmp_name'], $target) ) {      
                 array_push($this->errors, "Failed to upload photo!");
             }            
@@ -107,90 +114,20 @@ class Services {
             array_push($this->errors, "Please select an image for this service");
         }
         
-
-        
-        
-        $sub_id             = $_POST['sub_id'];
-        if(empty($sub_id)) {
-            array_push($this->errors, "Sub Category field is not selected");
-        }
-
-
-
-        $faq_ques           = $_POST['faq_ques'];
-        if(empty($faq_ques)) {
-            array_push($this->errors, "FAQ question field is empty");
-        }
-        $faq_ans            = $_POST['faq_ans'];
-        if(empty($faq_ans)) {
-            array_push($this->errors, "FAQ Answer field is empty");
-        }
-
-        
-
-
-
-        $serviceTitle       = $_POST['serviceTtile'];
-        if(empty($serviceTitle)) {
-            array_push($this->errors, "Service Title field is empty");
-        }
-
-        $serviceImage = "";
-        //$tmpusername = $username;
-        $imgextension = "";
-        if (strlen($_FILES['serviceImage']['name'])>0){
-            $serviceImage = $_FILES['serviceImage']['name'];
-            $tmp = strrev($serviceImage);
-            for ($i=0; $i<strlen($tmp); $i++) {
-                $imgextension = $tmp[$i].$imgextension;
-                if ($tmp[$i]=='.') {
-                    break;
-                }
-            } 
-            $t = time();
-            $serviceImage = $t.md5($serviceImage).$imgextension;
-            $target = "../images/".basename($serviceImage);
-            if ( !move_uploaded_file($_FILES['serviceImage']['tmp_name'], $target) ) {      
-                array_push($this->errors, "Failed to upload service detail photo!");
-            } 
-           // echo '<script type="text/javascript">alert("'.$serviceTitle.'")</script>';
-           // echo '<script type="text/javascript">alert("'.$serviceImage.'")</script>';
-            
-       
-        } else {
-            array_push($this->errors, "Please select an image for service detail");
-        }
-        
-        $serviceDetail      = $_POST['serviceDetail'];
-        if(empty($serviceDetail)) {
-            array_push($this->errors, "Service Detail field is empty");
-        }
-       // echo '<script type="text/javascript">alert("'.$serviceDetail.'")</script>';
-        
         //echo '<script type="text/javascript">alert("Hello")</script>';
         if(count($this->errors)==0) {
-            $faq_id = $this->insertFaq($faq_ques, $faq_ans);
-            if($faq_id != false) {
-                $service_detail_id = $this->insertServiceDetail($serviceTitle, $serviceImage, $serviceDetail);
-                if($service_detail_id != false) {
-                    if(!isset($this->conn)) {
-                        $this->conn = Connection::getInstance()->getConn();
-                    }
-                    $sql = "INSERT INTO `services`( `service_name`, `price`, `image`, `sub_id`, `faq_id`, `service_details_id`) VALUES ('$service_name','$price','$image','$sub_id','$faq_id','$service_detail_id') ";
+            if($this->conn == null) {
+                $this->conn = Connection::getInstance()->getConn();
+            }
+            $sql = "INSERT INTO `pizza`( `name`, `description`, `price`, `image`) VALUES ('$pizza_name', '$pizza_description', $price,'$image'); ";
                     try {
                         $this->conn->exec($sql);
                         
-                        header("Location: service.php");
+                        header("Location: pizza.php?msg=insertSuccessful");
                     } catch (PDOException $e) {
-                        array_push($this->errors, "Something wrong with inserting Service Insertion");
+                        array_push($this->errors, "Something wrong with inserting Pizza");
                         return false;
                     }
-                } else {
-                    array_push($this->errors, "Can not insert Service Detail! Try again");
-                }
-            } else {
-                array_push($this->errors, "Can not insert FAQ! Try again");
-            }
         }
         
 
@@ -198,39 +135,6 @@ class Services {
 
     }
 
-    private function insertServiceDetail($serviceTitle, $serviceImage, $serviceDetail) {
-        if(!isset($this->conn)) {
-            $this->conn = Connection::getInstance()->getConn();
-        }
-        $sql    = "INSERT INTO `service_details`( `service_detail_title`, `service_detail_image`, `service_description`) VALUES ('$serviceTitle','$serviceImage', '$serviceDetail') ";
-        $lastId = false;
-        try {
-            $this->conn->exec($sql);
-            $lastId = $this->conn->lastInsertId();
-           // header("Location: services.php");
-        } catch (PDOException $e) {
-            //array_push($this->errors, "Something wrong with inserting FAQ");
-            return false;
-        }
-        return $lastId;
-    }
-
-    private function insertFaq($ques, $ans) {
-        if(!isset($this->conn)) {
-            $this->conn = Connection::getInstance()->getConn();
-        }
-        $sql    = "INSERT INTO `faq`( `question`, `answer`) VALUES ('$ques','$ans') ";
-        $lastId = false;
-        try {
-            $this->conn->exec($sql);
-            $lastId = $this->conn->lastInsertId();
-           // header("Location: services.php");
-        } catch (PDOException $e) {
-            //array_push($this->errors, "Something wrong with inserting FAQ");
-            return false;
-        }
-        return $lastId;
-    }
 
     public function getServices() {
         if(!isset($this->conn)) {
