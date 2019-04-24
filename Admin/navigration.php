@@ -84,7 +84,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="add-slideshow.php"><i class="fa fa-circle-o"></i> Add Slide </a></li>
-                    <li><a href="order-history.php"><i class="fa fa-circle-o"></i> Order History </a></li>
+                    <li><a href="view-slideshow.php"><i class="fa fa-circle-o"></i> View Slides </a></li>
                     <li><a href="orderdetails.php"><i class="fa fa-circle-o"></i> Order Details </a></li>
                     <li><a href="order_detailsList.php"><i class="fa fa-circle-o"></i> Order Details View </a></li>
 <!--                    <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>-->

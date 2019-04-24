@@ -7,7 +7,7 @@
     function __construct() {
         if(isset($_POST['insertSlideShow'])) {
             $this->insertSlideShow();
-            echo '<script type="text/javascript">alert("Hello")</script>';
+            // echo '<script type="text/javascript">alert("Hello")</script>';
 
         }
         if(isset($_GET['deleteSlideShow'])) {

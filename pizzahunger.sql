@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2019 at 12:13 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.2.12
+-- Generation Time: Apr 24, 2019 at 04:16 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -95,7 +95,9 @@ CREATE TABLE `slideshow` (
 --
 
 INSERT INTO `slideshow` (`id`, `name`, `short-heading`, `description`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Italian Pizza', 'Crunchy', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.\r\n', '15561007551061608f5c370376287184f2a5dc7cc5.png', '2019-04-24 10:12:35', '2019-04-24 10:12:35');
+(2, 'Italian Pizza', 'Crunchy', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', '15561148231061608f5c370376287184f2a5dc7cc5.png', '2019-04-24 14:07:03', '2019-04-24 14:07:03'),
+(3, 'Italian Cuizine', 'Delicious', 'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.', '1556115260dc088ef0434115e7297fbed047ed1b79.png', '2019-04-24 14:14:20', '2019-04-24 14:14:20'),
+(4, 'We cooked your desired Pizza Recipe', 'Welcome', 'A small river named Duden flows by their place and supplies it with the necessary regelialia.', '1556115324f34ba8a4ac08ae90df8c4159ce987628.jpg', '2019-04-24 14:15:24', '2019-04-24 14:15:24');
 
 -- --------------------------------------------------------
 
@@ -166,7 +168,7 @@ ALTER TABLE `pizza`
 -- AUTO_INCREMENT for table `slideshow`
 --
 ALTER TABLE `slideshow`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
