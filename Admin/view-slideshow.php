@@ -40,6 +40,7 @@ include "navigration.php";
                             <tr>
                                 <th>ID</th>
                                 <th> Name</th>
+                                <th> Position</th>
                                 <th> Short Heading</th>
                                 <th> Description </th>
                                 <th>Image</th>
@@ -50,6 +51,7 @@ include "navigration.php";
                                 <tr>
                                 <td><?php echo $single['id']; ?></td>
                                 <td><?php echo $single['name']; ?></td>
+                                <td><?php echo $single['position']; ?></td>
                                 <td><?php echo $single['short-heading']; ?></td>
                                 <td><?php echo $single['description']; ?></td>
                                 <td><img src="../images/slideshow/<?php echo $single['image']; ?>" alt="Slide Image" width="128" height="128"></td>

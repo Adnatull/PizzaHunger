@@ -36,6 +36,14 @@ include "navigration.php";
                         <div class="box-body">
                             
                             <div class="form-group">
+                                <label for="inputSlidePosition" class="col-sm-2 control-label"> Slide Position </label>
+
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="position" id="inputSlidePosition" placeholder="Can be only 1,2 or 3. Because there are 3 slides in total">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="inputSlideName" class="col-sm-2 control-label"> Slide Name </label>
 
                                 <div class="col-sm-10">

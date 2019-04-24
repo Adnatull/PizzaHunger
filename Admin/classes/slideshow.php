@@ -61,6 +61,11 @@
             array_push($this->errors, "Short Heading field is empty");
         }
 
+        $position       = $_POST['position'];
+        if(empty($position)) {
+            array_push($this->errors, "Slide Position field is empty");
+        }
+
 
         $description              = $_POST['description'];
         if(empty($description)) {
@@ -94,7 +99,7 @@
             if($this->conn == null) {
                 $this->conn = Connection::getInstance()->getConn();
             }
-            $sql = "INSERT INTO `slideshow`( `name`, `short-heading`, `description`, `image`) VALUES ('$name', '$short_heading', '$description','$image'); ";
+            $sql = "INSERT INTO `slideshow`( `name`, `short-heading`, `description`, `image`, `position`) VALUES ('$name', '$short_heading', '$description','$image', '$position'); ";
                     try {
                         $this->conn->exec($sql);
                         

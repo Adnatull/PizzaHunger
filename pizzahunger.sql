@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2019 at 04:16 PM
+-- Generation Time: Apr 24, 2019 at 06:43 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
 
@@ -86,6 +86,7 @@ CREATE TABLE `slideshow` (
   `short-heading` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `image` varchar(255) NOT NULL,
+  `position` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -94,10 +95,10 @@ CREATE TABLE `slideshow` (
 -- Dumping data for table `slideshow`
 --
 
-INSERT INTO `slideshow` (`id`, `name`, `short-heading`, `description`, `image`, `created_at`, `updated_at`) VALUES
-(2, 'Italian Pizza', 'Crunchy', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', '15561148231061608f5c370376287184f2a5dc7cc5.png', '2019-04-24 14:07:03', '2019-04-24 14:07:03'),
-(3, 'Italian Cuizine', 'Delicious', 'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.', '1556115260dc088ef0434115e7297fbed047ed1b79.png', '2019-04-24 14:14:20', '2019-04-24 14:14:20'),
-(4, 'We cooked your desired Pizza Recipe', 'Welcome', 'A small river named Duden flows by their place and supplies it with the necessary regelialia.', '1556115324f34ba8a4ac08ae90df8c4159ce987628.jpg', '2019-04-24 14:15:24', '2019-04-24 14:15:24');
+INSERT INTO `slideshow` (`id`, `name`, `short-heading`, `description`, `image`, `position`, `created_at`, `updated_at`) VALUES
+(2, 'Italian Pizza', 'Crunchy', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', '15561148231061608f5c370376287184f2a5dc7cc5.png', 1, '2019-04-24 14:07:03', '2019-04-24 14:07:03'),
+(3, 'Italian Cuizine', 'Delicious', 'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.', '1556115260dc088ef0434115e7297fbed047ed1b79.png', 2, '2019-04-24 14:14:20', '2019-04-24 14:14:20'),
+(4, 'We cooked your desired Pizza Recipe', 'Welcome', 'A small river named Duden flows by their place and supplies it with the necessary regelialia.', '1556115324f34ba8a4ac08ae90df8c4159ce987628.jpg', 3, '2019-04-24 14:15:24', '2019-04-24 14:15:24');
 
 -- --------------------------------------------------------
 
@@ -168,7 +169,7 @@ ALTER TABLE `pizza`
 -- AUTO_INCREMENT for table `slideshow`
 --
 ALTER TABLE `slideshow`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
