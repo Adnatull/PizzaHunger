@@ -1,3 +1,7 @@
+<?php require_once "classes/Session.php"; ?>
+<?php require_once "classes/Connection.php"; ?>
+<?php require_once "classes/Pizza.php"; ?>
+<?php $pizza = Pizza::getInstance(); ?>
 <?php require_once "header.php"; ?>
 <?php require_once "components/navbar.php"; ?>
   
