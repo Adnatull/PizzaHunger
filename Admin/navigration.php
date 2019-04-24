@@ -71,7 +71,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="Pizza.php"><i class="fa fa-circle-o"></i>Add Pizza </a></li>
-                    <li><a href="service_view.php"><i class="fa fa-circle-o"></i> Pizza Collection </a></li>
+                    <li><a href="pizza_view.php"><i class="fa fa-circle-o"></i> Pizza Collection </a></li>
                     <li><a href="service_details.php"><i class="fa fa-circle-o"></i> Service Details </a></li>
                     <li><a href="service_details_view.php"><i class="fa fa-circle-o"></i> Service Details View </a></li>
                 </ul>
