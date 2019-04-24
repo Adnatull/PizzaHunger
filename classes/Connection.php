@@ -25,7 +25,7 @@ class Connection
     {
 
         try {
-            $this->db_connection = new PDO("mysql:host=127.0.0.1;dbname=pizzaHunger", "root", "");
+            $this->db_connection = new PDO("mysql:host=127.0.0.1;dbname=pizzahunger", "root", "");
             // set the PDO error mode to exception
             $this->db_connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             //echo "Connected successfully";

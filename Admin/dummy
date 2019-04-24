@@ -1,0 +1,342 @@
+$timeslots = array();
+        $cnt = 1;
+        if(isset($_POST['saturday'])) {
+            $day        = "saturday";
+            $beginTime  = $_POST['saturdayBeginTime'];
+            $endTime    = $_POST['saturdayEndTime'];
+            if(strcmp($beginTime, $endTime)>=0) {
+                array_push($this->errors, "Please select a proper time range for Saturday");
+            }
+            $timeslots[$cnt]['day']         = $day;
+            $timeslots[$cnt]['beginTime']   = $beginTime;
+            $timeslots[$cnt]['endTime']     = $endTime;
+            $cnt++;    
+        }
+
+        if(isset($_POST['sunday'])) {
+            $day        = "sunday";
+            $beginTime  = $_POST['sundayBeginTime'];
+            $endTime    = $_POST['sundayEndTime'];
+            if(strcmp($beginTime, $endTime)>=0) {
+                array_push($this->errors, "Please select a proper time range for sunday");
+            }
+            $timeslots[$cnt]['day']         = $day;
+            $timeslots[$cnt]['beginTime']   = $beginTime;
+            $timeslots[$cnt]['endTime']     = $endTime;
+            $cnt++;    
+        }
+
+        if(isset($_POST['monday'])) {
+            $day        = "monday";
+            $beginTime  = $_POST['mondayBeginTime'];
+            $endTime    = $_POST['mondayEndTime'];
+            if(strcmp($beginTime, $endTime)>=0) {
+                array_push($this->errors, "Please select a proper time range for monday");
+            }
+            $timeslots[$cnt]['day']         = $day;
+            $timeslots[$cnt]['beginTime']   = $beginTime;
+            $timeslots[$cnt]['endTime']     = $endTime;
+            $cnt++;    
+        }
+
+        if(isset($_POST['tuesday'])) {
+            $day        = "tuesday";
+            $beginTime  = $_POST['tuesdayBeginTime'];
+            $endTime    = $_POST['tuesdayEndTime'];
+            if(strcmp($beginTime, $endTime)>=0) {
+                array_push($this->errors, "Please select a proper time range for tuesday");
+            }
+            $timeslots[$cnt]['day']         = $day;
+            $timeslots[$cnt]['beginTime']   = $beginTime;
+            $timeslots[$cnt]['endTime']     = $endTime;
+            $cnt++;    
+        }
+
+        if(isset($_POST['wednesday'])) {
+            $day        = "wednesday";
+            $beginTime  = $_POST['wednesdayBeginTime'];
+            $endTime    = $_POST['wednesdayEndTime'];
+            if(strcmp($beginTime, $endTime)>=0) {
+                array_push($this->errors, "Please select a proper time range for wednesday");
+            }
+            $timeslots[$cnt]['day']         = $day;
+            $timeslots[$cnt]['beginTime']   = $beginTime;
+            $timeslots[$cnt]['endTime']     = $endTime;
+            $cnt++;    
+        }
+
+        if(isset($_POST['thursday'])) {
+            $day        = "thursday";
+            $beginTime  = $_POST['thursdayBeginTime'];
+            $endTime    = $_POST['thursdayEndTime'];
+            if(strcmp($beginTime, $endTime)>=0) {
+                array_push($this->errors, "Please select a proper time range for thursday");
+            }
+            $timeslots[$cnt]['day']         = $day;
+            $timeslots[$cnt]['beginTime']   = $beginTime;
+            $timeslots[$cnt]['endTime']     = $endTime;
+            $cnt++;    
+        }
+
+        if(isset($_POST['friday'])) {
+            $day        = "friday";
+            $beginTime  = $_POST['fridayBeginTime'];
+            $endTime    = $_POST['fridayEndTime'];
+            if(strcmp($beginTime, $endTime)>=0) {
+                array_push($this->errors, "Please select a proper time range for friday");
+            }
+            $timeslots[$cnt]['day']         = $day;
+            $timeslots[$cnt]['beginTime']   = $beginTime;
+            $timeslots[$cnt]['endTime']     = $endTime;
+            $cnt++;    
+        }
+        //echo '<script type="text/javascript">alert("'.var_dump($timeslots).'")</script>';
+
+
+
+
+        <div class="form-group row">
+                                                <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg text-right">কাজের সময় নির্ধারণ/শিডিউল* </label>
+                                                <div class="col-sm-7">
+                                                    Select your working days <br>
+                                                    <div class="">
+                                                    <input type="checkbox" value="saturday" name="saturday"/> শনি
+                                                     <select name="saturdayBeginTime">
+                                                         <option value="0900"> 9:00 AM  </option>
+                                                         <option value="1000"> 10:00 AM  </option>
+                                                         <option value="1100"> 11:00 AM  </option>
+                                                         <option value="1200"> 12:00 PM  </option>
+                                                         <option value="1300"> 1:00 PM  </option>
+                                                         <option value="1400"> 2:00 PM  </option>
+                                                         <option value="1500"> 3:00 PM  </option>
+                                                         <option value="1600"> 4:00 PM  </option>
+                                                         <option value="1700"> 5:00 PM  </option>
+                                                         <option value="1800"> 6:00 PM  </option>
+                                                         <option value="1900"> 7:00 PM  </option>
+                                                         <option value="2000"> 8:00 PM  </option>
+                                                         <option value="2100"> 9:00 PM  </option>
+                                                     </select>
+                                                    থেকে
+                                                    <select name="saturdayEndTime">
+                                                         <option value="0900"> 9:00 AM  </option>
+                                                         <option value="1000"> 10:00 AM  </option>
+                                                         <option value="1100"> 11:00 AM  </option>
+                                                         <option value="1200"> 12:00 PM  </option>
+                                                         <option value="1300"> 1:00 PM  </option>
+                                                         <option value="1400"> 2:00 PM  </option>
+                                                         <option value="1500"> 3:00 PM  </option>
+                                                         <option value="1600"> 4:00 PM  </option>
+                                                         <option value="1700"> 5:00 PM  </option>
+                                                         <option value="1800"> 6:00 PM  </option>
+                                                         <option value="1900"> 7:00 PM  </option>
+                                                         <option value="2000"> 8:00 PM  </option>
+                                                         <option value="2100"> 9:00 PM  </option>
+                                                    </select>
+                                                </div>
+                                                    <div class="">
+                                                        <input type="checkbox" value="sunday" name="sunday"/> রবি
+                                                        <select name="sundayBeginTime">
+                                                            <option value="0900"> 9:00 AM  </option>
+                                                            <option value="1000"> 10:00 AM  </option>
+                                                            <option value="1100"> 11:00 AM  </option>
+                                                            <option value="1200"> 12:00 PM  </option>
+                                                            <option value="1300"> 1:00 PM  </option>
+                                                            <option value="1400"> 2:00 PM  </option>
+                                                            <option value="1500"> 3:00 PM  </option>
+                                                            <option value="1600"> 4:00 PM  </option>
+                                                            <option value="1700"> 5:00 PM  </option>
+                                                            <option value="1800"> 6:00 PM  </option>
+                                                            <option value="1900"> 7:00 PM  </option>
+                                                            <option value="2000"> 8:00 PM  </option>
+                                                            <option value="2100"> 9:00 PM  </option>
+                                                        </select>
+                                                        থেকে
+                                                        <select name="sundayEndTime">
+                                                            <option value="0900"> 9:00 AM  </option>
+                                                            <option value="1000"> 10:00 AM  </option>
+                                                            <option value="1100"> 11:00 AM  </option>
+                                                            <option value="1200"> 12:00 PM  </option>
+                                                            <option value="1300"> 1:00 PM  </option>
+                                                            <option value="1400"> 2:00 PM  </option>
+                                                            <option value="1500"> 3:00 PM  </option>
+                                                            <option value="1600"> 4:00 PM  </option>
+                                                            <option value="1700"> 5:00 PM  </option>
+                                                            <option value="1800"> 6:00 PM  </option>
+                                                            <option value="1900"> 7:00 PM  </option>
+                                                            <option value="2000"> 8:00 PM  </option>
+                                                            <option value="2100"> 9:00 PM  </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="">
+                                                        <input type="checkbox" value="monday" name="monday"/> সোম
+                                                        <select name="mondayBeginTime">
+                                                            <option value="0900"> 9:00 AM  </option>
+                                                            <option value="1000"> 10:00 AM  </option>
+                                                            <option value="1100"> 11:00 AM  </option>
+                                                            <option value="1200"> 12:00 PM  </option>
+                                                            <option value="1300"> 1:00 PM  </option>
+                                                            <option value="1400"> 2:00 PM  </option>
+                                                            <option value="1500"> 3:00 PM  </option>
+                                                            <option value="1600"> 4:00 PM  </option>
+                                                            <option value="1700"> 5:00 PM  </option>
+                                                            <option value="1800"> 6:00 PM  </option>
+                                                            <option value="1900"> 7:00 PM  </option>
+                                                            <option value="2000"> 8:00 PM  </option>
+                                                            <option value="2100"> 9:00 PM  </option>
+                                                        </select>
+                                                        থেকে
+                                                        <select name="mondayEndTime">
+                                                            <option value="0900"> 9:00 AM  </option>
+                                                            <option value="1000"> 10:00 AM  </option>
+                                                            <option value="1100"> 11:00 AM  </option>
+                                                            <option value="1200"> 12:00 PM  </option>
+                                                            <option value="1300"> 1:00 PM  </option>
+                                                            <option value="1400"> 2:00 PM  </option>
+                                                            <option value="1500"> 3:00 PM  </option>
+                                                            <option value="1600"> 4:00 PM  </option>
+                                                            <option value="1700"> 5:00 PM  </option>
+                                                            <option value="1800"> 6:00 PM  </option>
+                                                            <option value="1900"> 7:00 PM  </option>
+                                                            <option value="2000"> 8:00 PM  </option>
+                                                            <option value="2100"> 9:00 PM  </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="">
+                                                        <input type="checkbox" value="tuesday" name="tuesday"/> মঙ্গল
+                                                        <select name="tuesdayBeginTime">
+                                                            <option value="0900"> 9:00 AM  </option>
+                                                            <option value="1000"> 10:00 AM  </option>
+                                                            <option value="1100"> 11:00 AM  </option>
+                                                            <option value="1200"> 12:00 PM  </option>
+                                                            <option value="1300"> 1:00 PM  </option>
+                                                            <option value="1400"> 2:00 PM  </option>
+                                                            <option value="1500"> 3:00 PM  </option>
+                                                            <option value="1600"> 4:00 PM  </option>
+                                                            <option value="1700"> 5:00 PM  </option>
+                                                            <option value="1800"> 6:00 PM  </option>
+                                                            <option value="1900"> 7:00 PM  </option>
+                                                            <option value="2000"> 8:00 PM  </option>
+                                                            <option value="2100"> 9:00 PM  </option>
+                                                        </select>
+                                                        থেকে
+                                                        <select name="tuesdayEndTime">
+                                                            <option value="0900"> 9:00 AM  </option>
+                                                            <option value="1000"> 10:00 AM  </option>
+                                                            <option value="1100"> 11:00 AM  </option>
+                                                            <option value="1200"> 12:00 PM  </option>
+                                                            <option value="1300"> 1:00 PM  </option>
+                                                            <option value="1400"> 2:00 PM  </option>
+                                                            <option value="1500"> 3:00 PM  </option>
+                                                            <option value="1600"> 4:00 PM  </option>
+                                                            <option value="1700"> 5:00 PM  </option>
+                                                            <option value="1800"> 6:00 PM  </option>
+                                                            <option value="1900"> 7:00 PM  </option>
+                                                            <option value="2000"> 8:00 PM  </option>
+                                                            <option value="2100"> 9:00 PM  </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="">
+                                                        <input type="checkbox" value="wednesday" name="wednesday"/> বুধ
+                                                        <select name="wednesdayBeginTime">
+                                                            <option value="0900"> 9:00 AM  </option>
+                                                            <option value="1000"> 10:00 AM  </option>
+                                                            <option value="1100"> 11:00 AM  </option>
+                                                            <option value="1200"> 12:00 PM  </option>
+                                                            <option value="1300"> 1:00 PM  </option>
+                                                            <option value="1400"> 2:00 PM  </option>
+                                                            <option value="1500"> 3:00 PM  </option>
+                                                            <option value="1600"> 4:00 PM  </option>
+                                                            <option value="1700"> 5:00 PM  </option>
+                                                            <option value="1800"> 6:00 PM  </option>
+                                                            <option value="1900"> 7:00 PM  </option>
+                                                            <option value="2000"> 8:00 PM  </option>
+                                                            <option value="2100"> 9:00 PM  </option>
+                                                        </select>
+                                                        থেকে
+                                                        <select name="wednesdayEndTime">
+                                                            <option value="0900"> 9:00 AM  </option>
+                                                            <option value="1000"> 10:00 AM  </option>
+                                                            <option value="1100"> 11:00 AM  </option>
+                                                            <option value="1200"> 12:00 PM  </option>
+                                                            <option value="1300"> 1:00 PM  </option>
+                                                            <option value="1400"> 2:00 PM  </option>
+                                                            <option value="1500"> 3:00 PM  </option>
+                                                            <option value="1600"> 4:00 PM  </option>
+                                                            <option value="1700"> 5:00 PM  </option>
+                                                            <option value="1800"> 6:00 PM  </option>
+                                                            <option value="1900"> 7:00 PM  </option>
+                                                            <option value="2000"> 8:00 PM  </option>
+                                                            <option value="2100"> 9:00 PM  </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="">
+                                                        <input type="checkbox" value="thursday" name="thursday"/> বৃহস্পতি
+                                                        <select name="thursdayBeginTime">
+                                                            <option value="0900"> 9:00 AM  </option>
+                                                            <option value="1000"> 10:00 AM  </option>
+                                                            <option value="1100"> 11:00 AM  </option>
+                                                            <option value="1200"> 12:00 PM  </option>
+                                                            <option value="1300"> 1:00 PM  </option>
+                                                            <option value="1400"> 2:00 PM  </option>
+                                                            <option value="1500"> 3:00 PM  </option>
+                                                            <option value="1600"> 4:00 PM  </option>
+                                                            <option value="1700"> 5:00 PM  </option>
+                                                            <option value="1800"> 6:00 PM  </option>
+                                                            <option value="1900"> 7:00 PM  </option>
+                                                            <option value="2000"> 8:00 PM  </option>
+                                                            <option value="2100"> 9:00 PM  </option>
+                                                        </select>
+                                                        থেকে
+                                                        <select name="thursdayEndTime">
+                                                            <option value="0900"> 9:00 AM  </option>
+                                                            <option value="1000"> 10:00 AM  </option>
+                                                            <option value="1100"> 11:00 AM  </option>
+                                                            <option value="1200"> 12:00 PM  </option>
+                                                            <option value="1300"> 1:00 PM  </option>
+                                                            <option value="1400"> 2:00 PM  </option>
+                                                            <option value="1500"> 3:00 PM  </option>
+                                                            <option value="1600"> 4:00 PM  </option>
+                                                            <option value="1700"> 5:00 PM  </option>
+                                                            <option value="1800"> 6:00 PM  </option>
+                                                            <option value="1900"> 7:00 PM  </option>
+                                                            <option value="2000"> 8:00 PM  </option>
+                                                            <option value="2100"> 9:00 PM  </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="">
+                                                        <input type="checkbox" value="friday" name="friday"/> শুক্র
+                                                        <select name="fridayBeginTime">
+                                                            <option value="0900"> 9:00 AM  </option>
+                                                            <option value="1000"> 10:00 AM  </option>
+                                                            <option value="1100"> 11:00 AM  </option>
+                                                            <option value="1200"> 12:00 PM  </option>
+                                                            <option value="1300"> 1:00 PM  </option>
+                                                            <option value="1400"> 2:00 PM  </option>
+                                                            <option value="1500"> 3:00 PM  </option>
+                                                            <option value="1600"> 4:00 PM  </option>
+                                                            <option value="1700"> 5:00 PM  </option>
+                                                            <option value="1800"> 6:00 PM  </option>
+                                                            <option value="1900"> 7:00 PM  </option>
+                                                            <option value="2000"> 8:00 PM  </option>
+                                                            <option value="2100"> 9:00 PM  </option>
+                                                        </select>
+                                                        থেকে
+                                                        <select name="fridayEndTime">
+                                                            <option value="0900"> 9:00 AM  </option>
+                                                            <option value="1000"> 10:00 AM  </option>
+                                                            <option value="1100"> 11:00 AM  </option>
+                                                            <option value="1200"> 12:00 PM  </option>
+                                                            <option value="1300"> 1:00 PM  </option>
+                                                            <option value="1400"> 2:00 PM  </option>
+                                                            <option value="1500"> 3:00 PM  </option>
+                                                            <option value="1600"> 4:00 PM  </option>
+                                                            <option value="1700"> 5:00 PM  </option>
+                                                            <option value="1800"> 6:00 PM  </option>
+                                                            <option value="1900"> 7:00 PM  </option>
+                                                            <option value="2000"> 8:00 PM  </option>
+                                                            <option value="2100"> 9:00 PM  </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
