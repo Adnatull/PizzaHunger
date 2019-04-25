@@ -99,7 +99,7 @@
         			<div class="desc pl-3">
 	        			<div class="d-flex text align-items-center">
 	        				<h3><span><?php echo $pizza['name']; ?></span></h3>
-	        				<span class="price"><?php echo $pizza['price']; ?></span>
+	        				<span class="price">$ <?php echo $pizza['price']; ?></span>
 	        			</div>
 	        			<div class="d-block">
 	        				<p><?php echo $pizza['description']; ?></p>

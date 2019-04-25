@@ -14,7 +14,7 @@ $slide3 = $slide->thirdSlide();
             	<span class="subheading"><?php echo $slide1[0]['short-heading']; ?></span>
               <h1 class="mb-4"><?php echo $slide1[0]['name']; ?></h1>
               <p class="mb-4 mb-md-5"><?php echo $slide1[0]['description']; ?></p>
-              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
+              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="menu.php" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
             </div>
             <div class="col-md-6 ftco-animate">
             	<img src="images/slideshow/<?php echo $slide1[0]['image']; ?>" class="img-fluid" alt="">
@@ -33,7 +33,7 @@ $slide3 = $slide->thirdSlide();
             	<span class="subheading"><?php echo $slide2[0]['short-heading']; ?></span>
               <h1 class="mb-4"><?php echo $slide2[0]['name']; ?></h1>
               <p class="mb-4 mb-md-5"><?php echo $slide2[0]['description']; ?></p>
-              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
+              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="menu.php" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
             </div>
             <div class="col-md-6 ftco-animate">
             	<img src="images/slideshow/<?php echo $slide2[0]['image']; ?>" class="img-fluid" alt="">
@@ -52,7 +52,7 @@ $slide3 = $slide->thirdSlide();
             	<span class="subheading"><?php echo $slide3[0]['short-heading']; ?></span>
               <h1 class="mb-4"><?php echo $slide3[0]['name']; ?></h1>
               <p class="mb-4 mb-md-5"><?php echo $slide3[0]['description']; ?></p>
-              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
+              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="menu.php" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
             </div>
 
           </div>

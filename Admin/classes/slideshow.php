@@ -11,7 +11,6 @@
 
         }
         if(isset($_GET['deleteSlideShow'])) {
-           // echo '<script type="text/javascript">alert("'.$_GET['deleteService'].'")</script>';
            $this->deleteSlideShow();
         }
     }
@@ -45,8 +44,6 @@
         }catch(PDOException $e) {
             array_push($this->errors, "Could not remove slideshow from database");
         }
-
-
     }
 
     private function insertSlideShow() {

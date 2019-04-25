@@ -1,5 +1,8 @@
+<?php require_once "classes/Connection.php"; ?>
+<?php require_once "classes/Contact.php"; ?>
 <?php require_once "header.php"; ?>
 <?php require_once "components/navbar.php"; ?>
+
 
 
     <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
