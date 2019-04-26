@@ -1,10 +1,8 @@
-
-
-<?php require_once "classes/Session.php"; ?>
 <?php require_once "classes/Connection.php"; ?>
 <?php require_once "classes/Pizza.php"; ?>
 <?php require_once "classes/SlideShow.php"; ?>
 <?php require_once "classes/Contact.php"; ?>
+
 
 
 <?php require_once "header.php"; ?>

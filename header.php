@@ -1,3 +1,8 @@
+<?php require_once "classes/Session.php"; ?>
+<?php $data = Session::getStart(); 
+require_once "classes/Auth.php";
+$Auth = Auth::getInstance();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,8 +29,21 @@
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
     
+
+    
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
   </head>
   <body>
+
+  <div class="center1">
+    <?php if(isset($data->userLoggedIn)): ?>
+      <h5> <?php echo $data->user['email'];  ?></h5>
+      <a href="index.php?logout='1'">Log Out</a>
+
+    <?php else: ?>
+      <a href='login.php'>Login</a>
+    <?php endif ?>
+</div>

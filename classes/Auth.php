@@ -5,10 +5,15 @@ class Auth {
     private static $start = null;
     private $conn = null;
     public $errors = array();
-    private function __construct() {
+    public function __construct() {
         if(isset($_POST['login'])){
             $this->loginUser();
+        }
+     
+        if(isset($_GET['logout'])) {
+            // echo '<script type="text/javascript">alert("Customer Log OUT")</script>';
 
+              $this->userLogOut();
         }
     }
 
@@ -19,7 +24,7 @@ class Auth {
         return self::$start;
     }
 
-    private function loginUser() {-
+    private function loginUser() {
 
         $this->errors = array();
         $email = $_POST['email'];
@@ -30,7 +35,7 @@ class Auth {
         if (empty($password)) {
             array_push($this->errors, "Password field is empty");
         }
-        $password = md5($password);
+        // $password = md5($password);
         if(count($this->errors)==0) { 
             if($this->conn == null) {
                 $this->conn = Connection::getInstance();
@@ -45,11 +50,12 @@ class Auth {
                     if($this->data == null) {
                         $this->data = Session::getStart();
                     }
+                    $this->data->userLoggedIn = true;
                     $this->data->userID = $user['id'];
                     $this->data->user = $user;
                     $this->data->user['password'] = "";
-                    echo '<script type="text/javascript">alert("Login Successful")</script>';
-                    
+                    // echo '<script type="text/javascript">alert("Login Successful")</script>';
+                    header("Location: index.php");
                     
                 } else {
                     array_push($this->errors, "Wrong email/password");
@@ -60,12 +66,16 @@ class Auth {
     }
 
     private function userLogOut() {
-        //echo '<script type="text/javascript">alert("Customer Log OUT")</script>';
-        $this->data = Session::getStart();
+        //  echo '<script type="text/javascript">alert("Customer Log OUT")</script>';
+        if($this->data == null) {
+            $this->data = Session::getStart();
+        }
+        // unset($this->data);
+        unset($this->data->userLoggedIn);
         unset($this->data->userID);
         unset($this->data->user);
         $this->data->destroy();
-        header("Location: index.php");
+        // header("Location: index.php");
     } 
     
 } 
