@@ -5,7 +5,9 @@ class ContactUs {
     public $errors = array();
 
     function __construct() {
-        if(isset($_POST['contactus'])) {
+        
+
+        if(isset($_GET['name']) && isset($_GET['email']) && isset($_GET['subject']) && isset($_GET['message'])) {
             $this->storeContactMessage();
         }
     }
@@ -20,10 +22,10 @@ class ContactUs {
     private function storeContactMessage() {
         $this->errors = array();
 
-        $name       = $_POST['name'];
-        $email      = $_POST['email'];
-        $subject    = $_POST['subject'];
-        $message    = $_POST['message'];
+        $name       = $_GET['name'];
+        $email      = $_GET['email'];
+        $subject    = $_GET['subject'];
+        $message    = $_GET['message'];
 
         if(empty($name)) {
             array_push($this->errors, "name field is empty!");
@@ -40,6 +42,7 @@ class ContactUs {
         if(empty($message)) {
             array_push($this->errors, "Message field is empty!");
         }
+        
 
         if(count($this->errors)==0) {
             if(!isset($this->conn)) {
@@ -48,13 +51,16 @@ class ContactUs {
             $sql = "INSERT INTO contactus (name, email, subject, message) VALUES ('$name', '$email', '$subject', '$message');";
             try {
                 $this->conn->exec($sql);
-                header("Location: contact.php");
+                echo "<name> Message has been sent to Administration </name>\n";
             } catch (PDOException $e) {
-                array_push($this->errors, "Something wrong with your picture");
+                echo "<name> Insertion failed </name\n";
+            }
+        } else {
+            foreach($this->errors as $error) {
+                echo "<name> ". $error ." </name\n";
             }
         }
-        
-        
+               
 
     }
 }
