@@ -85,24 +85,24 @@
                 <ul class="treeview-menu">
                     <li><a href="add-slideshow.php"><i class="fa fa-circle-o"></i> Add Slide </a></li>
                     <li><a href="view-slideshow.php"><i class="fa fa-circle-o"></i> View Slides </a></li>
-                    <li><a href="orderdetails.php"><i class="fa fa-circle-o"></i> Order Details </a></li>
-                    <li><a href="order_detailsList.php"><i class="fa fa-circle-o"></i> Order Details View </a></li>
+                    <!-- <li><a href="orderdetails.php"><i class="fa fa-circle-o"></i> Order Details </a></li>
+                    <li><a href="order_detailsList.php"><i class="fa fa-circle-o"></i> Order Details View </a></li> -->
 <!--                    <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>-->
 <!--                    <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>-->
                 </ul>
             </li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-edit"></i> <span> Others Facility </span>
+                    <i class="fa fa-edit"></i> <span> Guest Messages </span>
                     <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="termscondition.php"><i class="fa fa-circle-o"></i> Terms and Conditions </a></li>
-                    <li><a href="termsconditionview.php"><i class="fa fa-circle-o"></i> Terms and Conditions View </a></li>
+                    <li><a href="contactMessage.php"><i class="fa fa-circle-o"></i> See all the messages </a></li>
+                    <!-- <li><a href="termsconditionview.php"><i class="fa fa-circle-o"></i> Terms and Conditions View </a></li>
                     <li><a href="location.php"><i class="fa fa-circle-o"></i> Location </a></li>
-                    <li><a href="locationView.php"><i class="fa fa-circle-o"></i> Location View  </a></li>
+                    <li><a href="locationView.php"><i class="fa fa-circle-o"></i> Location View  </a></li> -->
                 </ul>
             </li>
             <li class="treeview">
