@@ -12,6 +12,23 @@
 	          <li class="nav-item"><a href="services.php" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+	          <li class="nav-item">
+							<?php if(isset($data->userLoggedIn)): ?>
+								<div class="dropdown1">
+									<button class="dropbtn nav-link"><?php echo $data->user['email'];  ?> 
+										<i class="fa fa-caret-down"></i>
+									</button>
+									<div class="dropdown-content1">
+									<a class="nav-link text-danger" href="index.php?logout='1'">Log Out</a>
+									</div>
+								</div>
+									<?php else: ?>
+										<a class="nav-link" href='login.php'>Login</a>
+							<?php endif ?>
+							
+
+								
+						</li>
 	        </ul>
 	      </div>
 		  </div>

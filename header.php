@@ -38,12 +38,4 @@ $Auth = Auth::getInstance();
   </head>
   <body>
 
-  <div class="center1">
-    <?php if(isset($data->userLoggedIn)): ?>
-      <h5> <?php echo $data->user['email'];  ?></h5>
-      <a href="index.php?logout='1'">Log Out</a>
-
-    <?php else: ?>
-      <a href='login.php'>Login</a>
-    <?php endif ?>
-</div>
+ 
